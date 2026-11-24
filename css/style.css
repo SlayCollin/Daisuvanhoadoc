@@ -1,240 +1,131 @@
-/* Giao diện giấy cổ điển & kệ gỗ - Tin học 12 */
+/* Nhập phông tiếng Việt chuẩn từ Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #faf6ee;
-  color: #33261d;
+  font-family: 'Be Vietnam Pro', 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f7fa;
+  color: #1e293b;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 header {
-  background-color: #4a2e1b;
-  color: #fff;
+  background-color: #16324f;
+  color: #ffffff;
   text-align: center;
-  padding: 15px 10px;
-  border-bottom: 4px solid #c89b3c;
+  padding: 20px 12px;
+  border-bottom: 4px solid #e86a33;
 }
 header h1 {
-  font-family: Georgia, serif;
-  margin: 0 0 5px;
+  margin: 0 0 6px;
+  letter-spacing: 0.5px;
 }
-nav { margin-top: 10px; }
+nav { margin-top: 12px; }
 nav a {
-  color: #faf6ee;
+  color: #e2e8f0;
   text-decoration: none;
-  padding: 6px 12px;
+  padding: 7px 14px;
   margin: 0 3px;
-  border-radius: 5px;
-  font-weight: bold;
+  border-radius: 6px;
+  font-weight: 600;
   display: inline-block;
+  transition: 0.2s;
 }
 nav a:hover, .chon {
-  background-color: #c89b3c;
-  color: #2c1e16;
+  background-color: #e86a33;
+  color: #ffffff;
 }
 main {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 15px;
+  max-width: 920px;
+  margin: 25px auto;
+  padding: 0 16px;
 }
 h2, h3 {
-  font-family: Georgia, serif;
-  color: #4a2e1b;
+  color: #16324f;
+  margin-top: 0;
 }
 h2 {
-  border-bottom: 2px dashed #c89b3c;
-  padding-bottom: 5px;
+  border-left: 5px solid #e86a33;
+  padding-left: 12px;
 }
 .hop {
-  background-color: #fff;
-  border: 1px solid #e0d3be;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 18px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(22, 50, 79, 0.06);
 }
-/* Kệ sách xếp ngang */
 .ke-sach {
   display: flex;
-  gap: 15px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 .sach {
   flex: 1;
-  min-width: 230px;
-  background-color: #fff;
-  border: 1px solid #e0d3be;
-  border-bottom: 10px solid #6b4226; /* Đế kệ gỗ */
-  border-radius: 8px;
-  padding: 14px;
-  transition: 0.2s;
-}
-.sach:hover {
-  transform: translateY(-5px);
-  background-color: #fffdf5;
-}
-img { max-width: 100%; border-radius: 6px; }
-blockquote {
-  background-color: #fff4d2;
-  border-left: 5px solid #c89b3c;
-  padding: 12px 15px;
-  font-style: italic;
-  margin: 15px 0;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: #fff;
-  margin: 15px 0;
-}
-th, td {
-  border: 1px solid #d9c9b0;
-  padding: 10px;
-  text-align: left;
-}
-th { background-color: #4a2e1b; color: #fff; }
-tr:hover { background-color: #f7efe0; }
-.nut {
-  display: inline-block;
-  background-color: #2f5233;
-  color: #fff;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-}
-.nut:hover { background-color: #1e3821; }
-input, textarea {
-  width: 96%;
-  padding: 8px;
-  margin: 5px 0 12px;
-  border: 1px solid #cbbba0;
-  border-radius: 5px;
-}
-footer {
-  background-color: #4a2e1b;
-  color: #e8dcc8;
-  text-align: center;
-  padding: 12px;
-  margin-top: 25px;
-  font-size: 14px;
-}
-/* Giao diện giấy cổ điển & kệ gỗ - Tin học 12 */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #faf6ee;
-  color: #33261d;
-  margin: 0;
-  line-height: 1.6;
-}
-header {
-  background-color: #4a2e1b;
-  color: #fff;
-  text-align: center;
-  padding: 15px 10px;
-  border-bottom: 4px solid #c89b3c;
-}
-header h1 {
-  font-family: Georgia, serif;
-  margin: 0 0 5px;
-}
-nav { margin-top: 10px; }
-nav a {
-  color: #faf6ee;
-  text-decoration: none;
-  padding: 6px 12px;
-  margin: 0 3px;
-  border-radius: 5px;
-  font-weight: bold;
-  display: inline-block;
-}
-nav a:hover, .chon {
-  background-color: #c89b3c;
-  color: #2c1e16;
-}
-main {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 0 15px;
-}
-h2, h3 {
-  font-family: Georgia, serif;
-  color: #4a2e1b;
-}
-h2 {
-  border-bottom: 2px dashed #c89b3c;
-  padding-bottom: 5px;
-}
-.hop {
-  background-color: #fff;
-  border: 1px solid #e0d3be;
-  border-radius: 8px;
+  min-width: 240px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid #e86a33;
+  border-radius: 12px;
   padding: 16px;
-  margin-bottom: 18px;
-}
-/* Kệ sách xếp ngang */
-.ke-sach {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-.sach {
-  flex: 1;
-  min-width: 230px;
-  background-color: #fff;
-  border: 1px solid #e0d3be;
-  border-bottom: 10px solid #6b4226; /* Đế kệ gỗ */
-  border-radius: 8px;
-  padding: 14px;
-  transition: 0.2s;
+  box-shadow: 0 4px 12px rgba(22, 50, 79, 0.06);
+  transition: 0.25s;
 }
 .sach:hover {
-  transform: translateY(-5px);
-  background-color: #fffdf5;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(22, 50, 79, 0.14);
 }
-img { max-width: 100%; border-radius: 6px; }
+img { max-width: 100%; border-radius: 8px; }
 blockquote {
-  background-color: #fff4d2;
-  border-left: 5px solid #c89b3c;
-  padding: 12px 15px;
+  background-color: #eaf2fb;
+  border-left: 4px solid #16324f;
+  padding: 14px 18px;
   font-style: italic;
-  margin: 15px 0;
+  border-radius: 0 8px 8px 0;
+  margin: 18px 0;
 }
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #fff;
-  margin: 15px 0;
+  background-color: #ffffff;
+  margin: 16px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(22, 50, 79, 0.06);
 }
 th, td {
-  border: 1px solid #d9c9b0;
-  padding: 10px;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px;
   text-align: left;
 }
-th { background-color: #4a2e1b; color: #fff; }
-tr:hover { background-color: #f7efe0; }
+th { background-color: #16324f; color: #ffffff; }
+tr:hover { background-color: #f1f5f9; }
 .nut {
   display: inline-block;
-  background-color: #2f5233;
-  color: #fff;
-  padding: 8px 16px;
+  background-color: #e86a33;
+  color: #ffffff;
+  padding: 9px 18px;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 8px;
+  font-weight: 600;
   border: none;
   cursor: pointer;
+  transition: 0.2s;
 }
-.nut:hover { background-color: #1e3821; }
+.nut:hover { background-color: #c95422; }
 input, textarea {
   width: 96%;
-  padding: 8px;
-  margin: 5px 0 12px;
-  border: 1px solid #cbbba0;
-  border-radius: 5px;
+  padding: 10px;
+  margin: 6px 0 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit;
 }
 footer {
-  background-color: #4a2e1b;
-  color: #e8dcc8;
+  background-color: #16324f;
+  color: #cbd5e1;
   text-align: center;
-  padding: 12px;
-  margin-top: 25px;
+  padding: 16px;
+  margin-top: 30px;
   font-size: 14px;
 }
