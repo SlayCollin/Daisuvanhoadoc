@@ -34,7 +34,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 14px;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
     .the-chang {
       background-color: #fafbfc;
@@ -46,6 +46,44 @@
     .the-chang h3 { font-size: 15px; color: #0b4a8b; margin: 6px 0; }
     .the-chang ul { margin: 8px 0; padding-left: 18px; font-size: 14px; }
     .the-chang p { margin: 6px 0; font-size: 14px; }
+
+    /* Bảng tổng hợp các chặng */
+    .bang-wrap {
+      overflow-x: auto;
+      margin-top: 16px;
+    }
+    .bang-chang {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #ffffff;
+      font-size: 14px;
+      border: 1px solid #cfd8e3;
+    }
+    .bang-chang th,
+    .bang-chang td {
+      border: 1px solid #cfd8e3;
+      padding: 11px 14px;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .bang-chang th {
+      background-color: #0b4a8b;
+      color: #ffffff;
+      font-weight: 700;
+      text-align: center;
+      white-space: nowrap;
+    }
+    .bang-chang td:nth-child(2),
+    .bang-chang td:nth-child(3) {
+      text-align: center;
+      white-space: nowrap;
+    }
+    .bang-chang tbody tr:nth-child(even) {
+      background-color: #f4f7fb;
+    }
+    .bang-chang tbody tr:hover {
+      background-color: #eaf1fa;
+    }
 
     /* Khung nhật ký 28 ngày có thanh cuộn gọn gàng */
     .ds-ngay {
@@ -65,7 +103,6 @@
       font-size: 14px;
     }
     .dong-ngay:last-child { border-bottom: none; }
-    /* Ghi đè width:100% từ style.css để ô tích không bị kéo giãn */
     .dong-ngay input[type="checkbox"] {
       width: 18px;
       height: 18px;
@@ -132,7 +169,21 @@
     .huy-hieu .icon { font-size: 26px; display: block; margin-bottom: 4px; }
     .huy-hieu p { margin: 3px 0 0; font-size: 12px; color: #666666; }
     .locked { opacity: 0.4; filter: grayscale(1); }
-    .ket-qua-form { color: #0b4a8b; font-weight: 700; margin-top: 10px; }
+
+    /* Bỏ hoàn toàn dấu chấm tròn đầu dòng ở mục Thử thách cùng bạn bè */
+    .ds-sidebar {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .ds-sidebar li {
+      padding: 8px 0;
+      border-bottom: 1px dashed #e1e6ed;
+      font-size: 14px;
+    }
+    .ds-sidebar li:last-child {
+      border-bottom: none;
+    }
 
     @media (max-width: 768px) {
       .luoi-chang { grid-template-columns: 1fr; }
@@ -140,7 +191,11 @@
   </style>
 </head>
 <body>
-
+  <div class="top-bar">
+    <div class="container">
+      Dự án học tập Tin học 12 – Năm học 2026–2027 | Nhóm 6: Văn hóa đọc và sách hay
+    </div>
+  </div>
 
   <header>
     <div class="container">
@@ -218,33 +273,39 @@
           </div>
         </div>
 
-        <!-- BẢNG TỔNG HỢP (Đảm bảo yêu cầu có bảng biểu) -->
-        <table>
-          <tr>
-            <th>Chặng</th>
-            <th>Thời lượng / ngày</th>
-            <th>Điểm tối đa</th>
-            <th>Danh hiệu mở khóa</th>
-          </tr>
-          <tr>
-            <td><b>Tuần 1</b> (Ngày 1–7)</td>
-            <td>10 phút</td>
-            <td>70 điểm</td>
-            <td>Mầm sách (ngày 1) &amp; Mọt sách (ngày 7)</td>
-          </tr>
-          <tr>
-            <td><b>Tuần 2</b> (Ngày 8–14)</td>
-            <td>15 phút</td>
-            <td>140 điểm</td>
-            <td>Ngọn lửa tri thức (ngày 14)</td>
-          </tr>
-          <tr>
-            <td><b>Tuần 3–4</b> (Ngày 15–28)</td>
-            <td>20–25 phút</td>
-            <td>280 điểm</td>
-            <td>Đại sứ đọc sách (ngày 28)</td>
-          </tr>
-        </table>
+        <!-- BẢNG TỔNG HỢP 4 CHẶNG -->
+        <div class="bang-wrap">
+          <table class="bang-chang">
+            <thead>
+              <tr>
+                <th>Chặng</th>
+                <th>Thời lượng / ngày</th>
+                <th>Điểm tối đa</th>
+                <th>Danh hiệu mở khóa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>Tuần 1</b> (Ngày 1–7)</td>
+                <td>10 phút</td>
+                <td>70 điểm</td>
+                <td>Mầm sách (ngày 1) &amp; Mọt sách (ngày 7)</td>
+              </tr>
+              <tr>
+                <td><b>Tuần 2</b> (Ngày 8–14)</td>
+                <td>15 phút</td>
+                <td>140 điểm</td>
+                <td>Ngọn lửa tri thức (ngày 14)</td>
+              </tr>
+              <tr>
+                <td><b>Tuần 3–4</b> (Ngày 15–28)</td>
+                <td>20–25 phút</td>
+                <td>280 điểm</td>
+                <td>Đại sứ đọc sách (ngày 28)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <!-- NHẬT KÝ 28 NGÀY -->
@@ -252,24 +313,6 @@
         <h2 class="tieu-de-muc"><span>Nhật ký 28 ngày (Tích chọn để cộng điểm)</span></h2>
         <p style="margin-top: 0;">Hoàn thành mỗi nhiệm vụ nhận ngay <b>+10 điểm</b>. Hãy tích thử để xem tiến độ cập nhật ở cột bên phải:</p>
         <div class="ds-ngay" id="dayList"></div>
-      </div>
-
-      <!-- FORM ĐỀ XUẤT SÁCH -->
-      <div class="hop">
-        <h2 class="tieu-de-muc"><span>Góc đề xuất sách hay cho lớp</span></h2>
-        <form id="bookForm">
-          <label for="studentName"><b>Tên của bạn:</b></label>
-          <input type="text" id="studentName" placeholder="Ví dụ: Minh - 12A1" required>
-
-          <label for="bookName"><b>Tên cuốn sách:</b></label>
-          <input type="text" id="bookName" placeholder="Nhập tên sách bạn muốn giới thiệu..." required>
-
-          <label for="reason"><b>Vì sao bạn muốn giới thiệu cuốn sách này?</b></label>
-          <textarea id="reason" rows="3" placeholder="Chia sẻ ngắn gọn cảm nhận của bạn..." required></textarea>
-
-          <button type="submit" class="nut">Gửi đề xuất sách</button>
-          <p class="ket-qua-form" id="formResult"></p>
-        </form>
       </div>
     </section>
 
@@ -294,149 +337,4 @@
       <div class="hop">
         <h2 class="tieu-de-muc"><span>Bộ sưu tập huy hiệu</span></h2>
         <div class="luoi-huy-hieu">
-          <div class="huy-hieu locked" id="badge1">
-            <span class="icon">🌱</span>
-            <b>Mầm sách</b>
-            <p>1 ngày</p>
-          </div>
-          <div class="huy-hieu locked" id="badge2">
-            <span class="icon">📚</span>
-            <b>Mọt sách</b>
-            <p>7 ngày</p>
-          </div>
-          <div class="huy-hieu locked" id="badge3">
-            <span class="icon">🔥</span>
-            <b>Ngọn lửa tri thức</b>
-            <p>14 ngày</p>
-          </div>
-          <div class="huy-hieu locked" id="badge4">
-            <span class="icon">👑</span>
-            <b>Đại sứ đọc sách</b>
-            <p>28 ngày</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="hop">
-        <h2 class="tieu-de-muc"><span>Thử thách cùng bạn bè</span></h2>
-        <ul class="ds-sidebar">
-          <li>1. Rủ 1 bạn cùng chọn chung một cuốn sách để đọc.</li>
-          <li>2. Cuối tuần chia sẻ một điều tâm đắc nhất.</li>
-          <li>3. Đặt câu hỏi và trao đổi về nhân vật trong sách.</li>
-          <li>4. Cuối tháng cùng giới thiệu cuốn sách cho cả lớp.</li>
-        </ul>
-      </div>
-    </aside>
-  </main>
-
-  <footer>
-    <div class="container footer-grid">
-      <div>
-        <h4>Dự án Tin học 12 – Nhóm 6</h4>
-        <p>Chủ đề: Văn hóa đọc và sách hay<br>Nội dung do các thành viên Nhóm 6 tự biên soạn.</p>
-      </div>
-      <div>
-        <h4>Chuyên mục chính</h4>
-        <p>
-          <a href="index.html">Trang chủ</a> |
-          <a href="sach-nen-doc.html">Sách nên đọc</a> |
-          <a href="goc-cam-nhan.html">Góc cảm nhận</a> |
-          <a href="thu-thach.html">Thử thách đọc</a>
-        </p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const missions = [
-      "Chọn một cuốn sách khiến bạn tò mò.",
-      "Đọc 5–8 trang và ghi lại một điều thú vị.",
-      "Tìm một câu văn bạn yêu thích.",
-      "Đọc sách trong 10 phút không bị gián đoạn.",
-      "Ghi lại một nhân vật bạn ấn tượng.",
-      "Kể cho bạn bè nghe về cuốn sách đang đọc.",
-      "Tổng kết tuần 1: Bạn đã học được điều gì?",
-      "Đọc 10 trang của cuốn sách đã chọn.",
-      "Tìm một kiến thức mới từ sách.",
-      "Ghi lại hai câu nói tâm đắc.",
-      "Đọc một chương mà không kiểm tra điện thoại.",
-      "Liên hệ một ý tưởng trong sách với cuộc sống.",
-      "Chia sẻ một kiến thức mới với bạn cùng lớp.",
-      "Tổng kết tuần 2: Điều gì khiến bạn bất ngờ?",
-      "Đọc và suy nghĩ về một nhân vật.",
-      "Viết một câu hỏi dành cho tác giả.",
-      "Ghi lại một bài học bạn muốn áp dụng.",
-      "Đọc một đoạn sách yêu thích lần thứ hai.",
-      "Viết cảm nhận ngắn về nội dung vừa đọc.",
-      "Thử kể lại nội dung sách trong 1 phút.",
-      "Tổng kết tuần 3: Cuốn sách đã thay đổi suy nghĩ nào?",
-      "Tiếp tục hành trình với 20–25 phút đọc.",
-      "Tìm một người bạn để giới thiệu sách.",
-      "Viết một đoạn giới thiệu sách ngắn.",
-      "Chọn ra 3 điều tâm đắc nhất.",
-      "Đọc tiếp phần sách còn dang dở.",
-      "Chia sẻ cuốn sách yêu thích với lớp.",
-      "Tổng kết 28 ngày: Viết lời hứa duy trì thói quen đọc!"
-    ];
-
-    const dayList = document.getElementById("dayList");
-
-    missions.forEach((mission, index) => {
-      const item = document.createElement("div");
-      item.className = "dong-ngay";
-
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.id = "day" + (index + 1);
-
-      const label = document.createElement("label");
-      label.htmlFor = checkbox.id;
-      label.textContent = "Ngày " + (index + 1) + ": " + mission;
-
-      const points = document.createElement("span");
-      points.className = "diem";
-      points.textContent = "+10đ";
-
-      item.append(checkbox, label, points);
-      dayList.appendChild(item);
-
-      checkbox.addEventListener("change", updateProgress);
-    });
-
-    function updateProgress() {
-      const completed = document.querySelectorAll('.dong-ngay input:checked').length;
-      const total = missions.length;
-      const percentage = Math.round(completed / total * 100);
-      const points = completed * 10;
-
-      document.getElementById("completed").textContent = completed + "/" + total;
-      document.getElementById("totalPoints").textContent = points;
-      document.getElementById("percentage").textContent = percentage + "%";
-      document.getElementById("progressText").textContent =
-        "Bạn đã hoàn thành " + completed + " trên " + total + " ngày.";
-      document.getElementById("progressFill").style.width = percentage + "%";
-
-      let message = "Mọi hành trình đều bắt đầu từ trang sách đầu tiên!";
-      if (completed >= 28) message = "Chúc mừng! Bạn đã chinh phục trọn vẹn 28 ngày đọc sách!";
-      else if (completed >= 14) message = "Tuyệt vời! Bạn đang tiến rất gần đến đích!";
-      else if (completed >= 7) message = "Bạn đã hình thành những bước đầu của thói quen đọc!";
-      else if (completed >= 1) message = "Khởi đầu rất tốt! Hãy tiếp tục duy trì nhé!";
-      document.getElementById("motivation").textContent = message;
-
-      [1, 7, 14, 28].forEach((milestone, index) => {
-        const badge = document.getElementById("badge" + (index + 1));
-        badge.classList.toggle("locked", completed < milestone);
-      });
-    }
-
-    document.getElementById("bookForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-      const name = document.getElementById("studentName").value;
-      const book = document.getElementById("bookName").value;
-      document.getElementById("formResult").textContent =
-        "Cảm ơn " + name + " đã giới thiệu cuốn sách \"" + book + "\" cho lớp!";
-      this.reset();
-    });
-  </script>
-</body>
-</html>
+          <div class="huy-hieu locked" id
