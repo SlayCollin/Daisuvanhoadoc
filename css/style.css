@@ -24,22 +24,26 @@ body {
 }
 
 /* 2. Đầu trang nền trắng, căn trái */
+
 header {
-  background-color: #ffffff;
+  background-color: #0b4a8b;
   padding: 16px 0;
-  border-bottom: 1px solid #e1e6ed;
+  border-bottom: 1px solid #083563;
 }
+
 header h1 {
   margin: 0;
   font-size: 24px;
-  color: #0b4a8b;
+  color: #ffffff;
   text-transform: uppercase;
 }
+
 header p {
   margin: 3px 0 0;
   font-size: 14px;
-  color: #555555;
+  color: #e3efff;
 }
+
 
 /* 3. Thanh menu ngang màu xanh đậm */
 nav {
