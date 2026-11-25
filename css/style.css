@@ -191,3 +191,13 @@ a.link-bai:hover { color: #c62828; text-decoration: underline; }
   color: #b8c9db;            
   line-height: 1.6;         
 }
+  
+.footer {
+  background-color: #083563; 
+  color: #dbe7f3;            
+  width: 100%;               
+}
+.footer-noi-dung {
+  padding: 25px 40px;       
+  font-family: 'Roboto', sans-serif;
+}
